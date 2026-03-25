@@ -256,24 +256,53 @@ video {
     font-size: 20px;
   }
 }
-@media (max-width: 768px) {
-  body {
-    padding: 10px;
-  }
-
-  .menu {
-    flex-direction: column;
-  }
-
-  .col {
-    width: 100%;
-  }
-}
-
+/* Basic layout */
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 900px;
   margin: auto;
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 1;
+  min-width: 300px; /* ensures equal size on all devices */
+  padding: 10px;
+}
+
+/* Form styling */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+input[type=submit] {
+  background-color: #d32f2f;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #b71c1c;
+}
+
+/* Responsive behavior */
+@media screen and (max-width: 600px) {
+  .row {
+    flex-direction: column;
+  }
 }
 
 
